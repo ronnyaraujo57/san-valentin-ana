@@ -1,0 +1,188 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.none {
+    display: none;
+}
+.h1_animation {
+    margin: 0;
+    display: inherit;
+    justify-content: inherit;
+    align-items: center;
+    animation-name: opacidad;
+    animation-iteration-count: 1;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+
+.center {
+    display: flex;
+    justify-content: inherit;
+    align-items: center;
+    height: 400px;
+    margin: 0px;
+}
+
+.corazon_latir {
+    position: absolute;
+    display: block;
+    width: 100%;
+    animation: latir infinite 1.5s linear;
+}
+
+.img_animation {
+    display: flex;
+    flex-direction: unset;
+    width: 25%;
+    padding: 2px;
+    border-radius: 20px;
+    animation-name: opacidad, latir;
+    animation-iteration-count: 1, infinite;
+    animation-duration: 6s, 1.5s;
+    animation-delay: 0s, 8s;
+}
+
+#frame #group {
+    position: absolute;
+}
+
+@keyframes opacidad {
+    0% {
+        transition: 3s;
+        opacity: 0;
+    }
+    /* 50% {
+        transition: 3s;
+        opacity: 0.5;
+    } */
+    100% {
+        transition: 3s;
+        opacity: 1;
+    }
+}
+
+@keyframes latir {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.02, 1.02);
+    }
+    55% {
+        transform: scale(0.95, 0.95);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+/* CSS */
+.button-64 {
+    align-items: center;
+    /* background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb); */
+    border: 0;
+    border-radius: 8px;
+    /* box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px; */
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+
+    background: rgba(248, 80, 50, 1);
+    background: -moz-radial-gradient(
+        center,
+        ellipse cover,
+        rgba(248, 80, 50, 1) 0%,
+        rgba(241, 111, 92, 1) 18%,
+        rgba(246, 41, 12, 1) 66%,
+        rgba(240, 47, 23, 1) 73%,
+        rgba(231, 56, 39, 1) 100%
+    );
+    background: -webkit-gradient(
+        radial,
+        center center,
+        0px,
+        center center,
+        100%,
+        color-stop(0%, rgba(248, 80, 50, 1)),
+        color-stop(18%, rgba(241, 111, 92, 1)),
+        color-stop(66%, rgba(246, 41, 12, 1)),
+        color-stop(73%, rgba(240, 47, 23, 1)),
+        color-stop(100%, rgba(231, 56, 39, 1))
+    );
+    background: -webkit-radial-gradient(
+        center,
+        ellipse cover,
+        rgba(248, 80, 50, 1) 0%,
+        rgba(241, 111, 92, 1) 18%,
+        rgba(246, 41, 12, 1) 66%,
+        rgba(240, 47, 23, 1) 73%,
+        rgba(231, 56, 39, 1) 100%
+    );
+    background: -o-radial-gradient(
+        center,
+        ellipse cover,
+        rgba(248, 80, 50, 1) 0%,
+        rgba(241, 111, 92, 1) 18%,
+        rgba(246, 41, 12, 1) 66%,
+        rgba(240, 47, 23, 1) 73%,
+        rgba(231, 56, 39, 1) 100%
+    );
+    background: -ms-radial-gradient(
+        center,
+        ellipse cover,
+        rgba(248, 80, 50, 1) 0%,
+        rgba(241, 111, 92, 1) 18%,
+        rgba(246, 41, 12, 1) 66%,
+        rgba(240, 47, 23, 1) 73%,
+        rgba(231, 56, 39, 1) 100%
+    );
+    background: radial-gradient(
+        ellipse at center,
+        rgba(248, 80, 50, 1) 0%,
+        rgba(241, 111, 92, 1) 18%,
+        rgba(246, 41, 12, 1) 66%,
+        rgba(240, 47, 23, 1) 73%,
+        rgba(231, 56, 39, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=1 );
+}
+
+.button-64:active,
+.button-64:hover {
+    outline: 0;
+}
+
+.button-64 span {
+    background: none;
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+.button-64:hover span {
+    background-color: rgb(5, 6, 45);
+}
+
+@media (min-width: 768px) {
+    .button-64 {
+        font-size: 24px;
+        min-width: 196px;
+    }
+}

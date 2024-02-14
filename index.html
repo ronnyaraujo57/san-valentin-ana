@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+  </head>
+  <body>
+      <div id="div-button" class="center">
+        <button id="btn-play" class="button-64" role="button" onclick="play()"><span class="text">Play</span></button>
+      </div>
+    <script type="text/javascript">
+        function play() {
+            document.getElementById("btn-play").classList.remove("button-64");
+            document.getElementById("btn-play").classList.add("none");
+            document.getElementById("div-button").classList.add("none");
+            document.getElementById("div-button").classList.remove("center");
+            document.getElementById("msj").classList.remove("none");
+            document.getElementById("msj0").classList.remove("none");
+            document.getElementById("msj1").classList.remove("none");
+            document.getElementById("frame").classList.remove("none");
+            document.getElementById("msj").classList.add("h1_animation");
+            document.getElementById("msj0").classList.add("h1_animation");
+            document.getElementById("msj1").classList.add("h1_animation");
+            document.getElementById("frame").classList.add("center");
+            document.getElementById("corazon").classList.add("corazon_latir");
+            document.getElementById("photo1").classList.add("img_animation");
+            document.getElementById("photo2").classList.add("img_animation");
+        }
+    </script>
+    <h1 id="msj" class="none">Feliz San Valentin</h1>
+    <h2 id="msj0" class="none">Ana Alcantara</h2>
+    <div id="frame" class="none">
+        <img id="corazon"class="" src="image/corazon.png" alt="animacion"/>
+        <div id="group" class="center">
+            <img id="photo1" class="" src="image/sexy-photo2.webp" alt="animacion"/>
+            <img id="photo2" class="" src="image/sexy-photo.webp" alt="animacion"/>
+        </div>
+    </div>
+    <h2 id="msj1" class="none">Friend With Benefits</h2>
+  </body>
+</html>
